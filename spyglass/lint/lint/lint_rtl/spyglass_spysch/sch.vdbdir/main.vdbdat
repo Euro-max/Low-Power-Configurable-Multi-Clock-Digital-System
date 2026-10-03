@@ -1,0 +1,16 @@
+#x HLBEGIN S.1
+#x {}
+#x 136 { @@n 0 @@p 0 }
+#x HLEND
+#x HLBEGIN S.2
+#x {}
+#x 136 { @@n 3 @@p 3 }
+#x HLEND
+#x HLBEGIN S.3
+#x {}
+#x 136 { @@n 4 @@p 4 }
+#x HLEND
+#x HLBEGIN S.4
+#x {{COLOR=>1;}}
+#x 134 { @@i 2 a 0 }
+#x HLEND

@@ -1,0 +1,2 @@
+waive -rule {  {SGDC_cdc_false_path07}  }  -comment {Created by ICer on 25-Sep-2026 03:45:21}  -exact 
+waive -rule {  {Setup_port01}  }  -comment {Created by ICer on 25-Sep-2026 03:48:15}  -exact 

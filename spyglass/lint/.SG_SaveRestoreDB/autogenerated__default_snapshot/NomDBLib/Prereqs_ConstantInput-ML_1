@@ -1,0 +1,2 @@
+MUX,../rtl/UART_TOP_TX.v_24,1,IO,1'b0
+MUX,../rtl/UART_TOP_TX.v_24,1,I3,1'b1

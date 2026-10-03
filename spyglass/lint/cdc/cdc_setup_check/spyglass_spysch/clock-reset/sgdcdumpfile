@@ -1,0 +1,37 @@
+
+BEGIN INFO
+1PORT@SYS_TOP.REF_CLK@@@@-@@@@CLKREF_DOMAIN@@@@20@@@@SYSTEM.sgdc:7 
+1PORT@SYS_TOP.UART_CLK@@@@-@@@@CLKUART_DOMAIN@@@@271.30@@@@SYSTEM.sgdc:8 
+1PORT@SYS_TOP.tx_clk@@@@-@@@@CLKUART_DOMAIN@@@@-@@@@SYSTEM.sgdc:23 
+1PORT@SYS_TOP.rx_clk@@@@-@@@@CLKUART_DOMAIN@@@@-@@@@SYSTEM.sgdc:24 
+1PORT@SYS_TOP.alu_clk@@@@-@@@@CLKREF_DOMAIN@@@@-@@@@SYSTEM.sgdc:25 
+2PORT@SYS_TOP.RST@@@@async@@@@0@@@@SYSTEM.sgdc:14 
+QuasiStatic@SYS_TOP.uart_config[0]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[1]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[2]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[3]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[4]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[5]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[6]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.uart_config[7]@@@@SYSTEM.sgdc:31@@@@-
+QuasiStatic@SYS_TOP.div_ratio[0]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[1]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[2]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[3]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[4]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[5]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[6]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.div_ratio[7]@@@@SYSTEM.sgdc:30@@@@-
+QuasiStatic@SYS_TOP.clk_div_en@@@@SYSTEM.sgdc:32@@@@-
+QuasiStatStyle@SYS_TOP@@10@@1@@false@@false@@-
+4PORT@SYS_TOP.RST@@@@ 
+4PORT@SYS_TOP.RX_IN@@@@ 
+7PORT@SYS_TOP.TX_OUT@@@@ 
+fifo_constr@SYS_TOP.u_ASYNC_FIFO.memory_core.mem@@@@SYS_TOP.u_ASYNC_FIFO.rptr_bin@@@@SYS_TOP.u_ASYNC_FIFO.wptr_bin@@@@SYSTEM.sgdc:33
+1N@SYS_TOP.RX_IN@@@@UART_CLK,@@@@-@@@@-@@@@-@@@@-@@@@-@@@@-@@@@-@@@@-@@@@SYSTEM.sgdc:21@@@@-
+PRIMARYIO@@SYS_TOP@@REF_CLK@@REF_CLK@@0@@1@@REF_CLK@@1@@@@
+PRIMARYIO@@SYS_TOP@@UART_CLK@@UART_CLK@@0@@1@@UART_CLK@@1@@@@
+PRIMARYIO@@SYS_TOP@@RST@@RST@@0@@1@@RST@@1@@@@
+PRIMARYIO@@SYS_TOP@@RX_IN@@RX_IN@@0@@1@@RX_IN@@1@@@@
+PRIMARYIO@@SYS_TOP@@TX_OUT@@TX_OUT@@0@@1@@TX_OUT@@2@@@@
+END INFO

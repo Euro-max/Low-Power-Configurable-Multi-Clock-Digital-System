@@ -1,0 +1,36 @@
+current_design SYS_TOP
+
+#######################################################################
+             #### Section 1 : Clock Definition ####
+#######################################################################
+# Master Clocks
+clock -name "REF_CLK"  -domain CLKREF_DOMAIN  -period 20     -waveform {0 10}
+clock -name "UART_CLK" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
+
+
+#######################################################################
+             #### Section 2 : Reset Definition ####
+#######################################################################
+reset -name "RST" -value 0 -async
+
+#######################################################################
+         #### Section 3 : set input/output clock domains ####
+#######################################################################
+# Constrain top-level ports to their respective clock domains to avoid 
+# unconstrained I/O violations. 
+abstract_port -ports "RX_IN"  -clock "UART_CLK"
+abstract_port -ports "TX_OUT" -clock "UART_CLK"
+clock -name "SYS_TOP.tx_clk" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
+clock -name "SYS_TOP.rx_clk" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
+clock -name "SYS_TOP.alu_clk" -domain CLKREF_DOMAIN -period 20 -waveform {0 10}
+#######################################################################
+            #### Section 4 : DATA/RESET Synchronizers ####
+#######################################################################
+# Define configuration signals as stable to ignore CDC checks on them
+quasi_static -name "SYS_TOP.div_ratio"
+quasi_static -name "SYS_TOP.uart_config"
+quasi_static -name "SYS_TOP.clk_div_en"
+quasi_static -name "SYS_TOP.u_RegFile.mem[3]"
+# Inform SpyGlass that memory read data is safely synchronized by the pointer logic
+cdc_false_path -from "SYS_TOP.u_ASYNC_FIFO.memory_core.mem" -to "*"
+fifo -memory "SYS_TOP.u_ASYNC_FIFO.memory_core.mem"

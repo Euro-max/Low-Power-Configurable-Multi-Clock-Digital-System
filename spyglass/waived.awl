@@ -1,0 +1,14 @@
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'stp_err' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'Carry_Flag' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'Arith_Flag' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'Logic_Flag' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'Shift_Flag' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'CMP_Flag' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -du {  {SYS_TOP}  }  -msg {Instance output port 'par_err' is not connected}  -rule {  {W287b}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:35:37} 
+waive -msg {Option '+incdir': Directory specification ''../rtl'' does not exists. Reason:No such file or directory}  -rule {  {checkCMD_dirfile03}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:36:10} 
+waive -msg {Option '+incdir': Directory specification ''./rtl'' does not exists. Reason:No such file or directory}  -rule {  {checkCMD_dirfile03}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:36:10} 
+waive -du {  {CLKGATE}  }  -msg {Latch inferred for signal 'LATCHED_CLK' in module 'CLKGATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 18-Sep-2026 18:54:09} 
+waive -du {  {CLKGATE}  }  -msg {Latch inferred for signal 'LATCHED_CLK' in module 'CLKGATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 24-Sep-2026 05:22:25} 
+waive -rule {  {W287b}  }  -comment {Created by ICer on 25-Sep-2026 02:51:48}  -exact 
+waive -rule {  {InferLatch}  }  -comment {Created by ICer on 25-Sep-2026 02:51:58}  -exact 
+waive -rule {  {checkCMD_dirfile03}  }  -comment {Created by ICer on 25-Sep-2026 02:52:14}  -exact 

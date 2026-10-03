@@ -1,0 +1,27 @@
+################################################################################
+#
+# Purpose: 
+#   This file specifies the assertion details along with their run status.
+#   Functional analysis is done only for those assertions that are enabled
+#   in the property file.
+#
+# Format: 
+#   
+#   RuleName: <rule-name>
+#   <selection> <type> <status> <file-name> <line-num> <hier> [ <info> ]
+#   .....
+#   
+#   
+################################################################################
+RuleName: Ac_conv02 
+on   Assertion   Partially-Proved    ../rtl/ASYNC_FIFO_TOP.v  121  "SYS_TOP.u_ASYNC_FIFO"  [SYS_TOP.u_ASYNC_FIFO.rq2_wptr_bin[0]]
+on   Assertion   Partially-Proved    ../rtl/ASYNC_FIFO_TOP.v  84  "SYS_TOP.u_ASYNC_FIFO"  [SYS_TOP.u_ASYNC_FIFO.wq2_rptr_bin[0]]
+
+RuleName: Ac_cdc01a 
+on   Assertion   Partially-Proved    ../rtl/DFFS.v  25  "SYS_TOP.u_ASYNC_FIFO.sync_w2r"  [SFlop:SYS_TOP.u_ASYNC_FIFO.wptr_gray[3] SClk:SYS_TOP.REF_CLK DFlop:SYS_TOP.u_ASYNC_FIFO.sync_w2r.shift_reg[3][0] DClk:SYS_TOP.tx_clk]
+on   Assertion   Partially-Proved    ../rtl/DFFS.v  25  "SYS_TOP.u_ASYNC_FIFO.sync_w2r"  [SFlop:SYS_TOP.u_ASYNC_FIFO.wptr_gray[2] SClk:SYS_TOP.REF_CLK DFlop:SYS_TOP.u_ASYNC_FIFO.sync_w2r.shift_reg[2][0] DClk:SYS_TOP.tx_clk]
+on   Assertion   Partially-Proved    ../rtl/DFFS.v  25  "SYS_TOP.u_ASYNC_FIFO.sync_w2r"  [SFlop:SYS_TOP.u_ASYNC_FIFO.wptr_gray[1] SClk:SYS_TOP.REF_CLK DFlop:SYS_TOP.u_ASYNC_FIFO.sync_w2r.shift_reg[1][0] DClk:SYS_TOP.tx_clk]
+on   Assertion   Partially-Proved    ../rtl/DFFS.v  25  "SYS_TOP.u_ASYNC_FIFO.sync_w2r"  [SFlop:SYS_TOP.u_ASYNC_FIFO.wptr_gray[0] SClk:SYS_TOP.REF_CLK DFlop:SYS_TOP.u_ASYNC_FIFO.sync_w2r.shift_reg[0][0] DClk:SYS_TOP.tx_clk]
+
+RuleName: Ac_datahold01a 
+off  Assertion   PROVED              ../rtl/DATA_SYNC.v  41  "SYS_TOP.u_DATA_SYNC"  [Des: "SYS_TOP.u_DATA_SYNC.\sync_bus_reg[0] .Q", Src: "SYS_TOP.\uart_rx_p_data_reg_reg[0] .Q"]

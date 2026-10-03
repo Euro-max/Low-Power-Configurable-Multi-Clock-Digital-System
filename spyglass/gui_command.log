@@ -1,0 +1,324 @@
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+
+
+
+
+set_goal_option default_waiver_file /home/ICer/Labs/SYSTEM/spyglass/waived.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule W287b -comment {Created by ICer on 25-Sep-2026 02:51:48}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule InferLatch -comment {Created by ICer on 25-Sep-2026 02:51:58}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule checkCMD_dirfile03 -comment {Created by ICer on 25-Sep-2026 02:52:14}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+run_goal
+
+
+
+current_goal cdc/cdc_setup_check -alltop
+run_goal
+
+
+
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule checkCMD_dirfile03 -comment {Created by ICer on 25-Sep-2026 02:54:29}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+run_goal
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Setup_port01 -comment {Created by ICer on 25-Sep-2026 03:03:44}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+save_waiver
+
+
+current_goal cdc/clock_reset_integrity -alltop
+run_goal
+
+
+
+
+gui_select_message -rule Clock_check01 -msg {Unexpected XOR gate (at SYS_TOP.tx_clk) in clock tree of flop (output net SYS_TOP.u_ASYNC_FIFO.sync_rreset.shift_reg[0])}
+read_file -type awl ./lint/cdc/clock_reset_integrity/lint_waiver_file.awl
+set_goal_option default_waiver_file ./lint/cdc/clock_reset_integrity/lint_waiver_file.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Clock_check01 -comment {Created by ICer on 25-Sep-2026 03:05:16}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+gui_select_message -rule Clock_check04 -msg {Recommended edge (positive) of clock 'SYS_TOP.UART_CLK' not used}
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Clock_check04 -comment {Created by ICer on 25-Sep-2026 03:05:39}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+gui_select_message -rule Clock_glitch04 -msg {Flop SYS_TOP.sync_clk_div_en_ff2 and Flop SYS_TOP.u_RegFile.mem[3][0] are converging through combinational logic to clock of Flop shift_reg[0]}
+gui_open_schematic -is
+gui_expand_schematic {pin u_CLK_DIV_TX.rtlc_I77 in_0 input}
+gui_expand_schematic {pin u_CLK_DIV_TX.rtlc_I99 in2 input}
+gui_open_schematic -is
+run_goal
+
+run_goal
+
+
+
+current_goal cdc/cdc_verify_struct -alltop
+run_goal
+
+
+
+
+gui_select_message -rule Ac_clockperiod01 -msg {For top design unit 'SYS_TOP', Period is not defined for 3 (60 %) clocks. Refer file: './lint/cdc/cdc_verify_struct/spyglass_reports/clock-reset/Ac_clockperiod01.csv' for details}
+gui_select_message -rule Ac_clockperiod01 -msg {For top design unit 'SYS_TOP', Edge-List is not defined for 3 (60 %) clocks. Refer file: './lint/cdc/cdc_verify_struct/spyglass_reports/clock-reset/Ac_clockperiod01.csv' for details}
+run_goal
+
+run_goal
+
+gui_select_message -rule Ac_conv01 -msg {5 synchronizers (SYS_TOP.u_ASYNC_FIFO.sync_r2w.shift_reg[3:0][0],SYS_TOP.u_DATA_SYNC.shift_reg[0]) converge on MUX 'SYS_TOP.u_SYS_CTRL.next_state[3]'}
+gui_open_schematic -is
+gui_select_message -rule Ac_conv02 -msg {4 synchronizers (SYS_TOP.u_ASYNC_FIFO.sync_r2w.shift_reg[3:0][0]) converge on combinational gate 'SYS_TOP.u_ASYNC_FIFO.wq2_rptr_bin[0]'. Gray encoding check: 'DISABLED'}
+gui_open_schematic -is
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Ac_conv01 -comment {Created by ICer on 25-Sep-2026 03:40:48}
+waive -rule Ac_conv02 -comment {Created by ICer on 25-Sep-2026 03:40:48}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+run_goal
+
+run_goal
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule SGDC_cdc_false_path07 -comment {Created by ICer on 25-Sep-2026 03:42:46}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+run_goal
+
+
+
+current_goal cdc/cdc_verify -alltop
+run_goal
+
+
+
+
+read_file -type awl ./lint/cdc/cdc_verify/lint_waiver_file.awl
+set_goal_option default_waiver_file ./lint/cdc/cdc_verify/lint_waiver_file.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule SGDC_cdc_false_path07 -comment {Created by ICer on 25-Sep-2026 03:45:21}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+save_waiver
+
+
+current_goal cdc/cdc_verify -alltop
+run_goal
+
+
+
+
+gui_select_message -rule Setup_port01 -msg {Port coverage for top design unit 'SYS_TOP' is: '1' (25.00 %) port(s) not fully constrained}
+gui_open_schematic -ms
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Setup_port01 -comment {Created by ICer on 25-Sep-2026 03:48:15}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+save_waiver
+
+
+current_goal cdc/cdc_abstract -alltop
+run_goal
+
+
+
+
+read_file -type awl ./lint/cdc/cdc_abstract/lint_waiver_file.awl
+set_goal_option default_waiver_file ./lint/cdc/cdc_abstract/lint_waiver_file.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Setup_port01 -comment {Created by ICer on 25-Sep-2026 03:49:05}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+
+
+
+run_goal
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule SGDC_cdc_false_path07 -comment {Created by ICer on 25-Sep-2026 03:49:36}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+save_waiver
+
+
+
+
+
+current_goal rdc/rdc_verify_struct -alltop
+run_goal
+
+
+
+
+read_file -type awl ./lint/rdc/rdc_verify_struct/lint_waiver_file.awl
+set_goal_option default_waiver_file ./lint/rdc/rdc_verify_struct/lint_waiver_file.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule SGDC_cdc_false_path07 -comment {Created by ICer on 25-Sep-2026 03:50:35}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+save_waiver
+
+
+
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Setup_port01 -comment {Created by ICer on 25-Sep-2026 03:50:53}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+
+
+
+save_waiver
+
+
+
+
+
+current_goal rdc/rdc_verify_struct -alltop
+run_goal
+
+
+
+
+gui_select_message -rule Clock_info03b -msg {Data pin of flop SYS_TOP.u_UART_TX.Ser.shift_reg[7], clocked by SYS_TOP.tx_clk , is tied to constant value 0}
+gui_open_schematic -ms
+gui_open_schematic -is
+save_project
+gui_exit
+gui_exit

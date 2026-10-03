@@ -1,0 +1,15 @@
+Date Created     : 25-09-2026 03:04:19
+SpyGlass Version : SpyGlass_vL-2016.06
+Project Name     : lint
+Goal Name        : cdc/clock_reset_integrity
+Scenario Name    : default_scenario
+Top              : 
+
+Message Summary
+Severity   Non-Waived  Waived
+FATAL           0         0
+ERROR           0         0
+WARNING         7         0
+INFO            8         0
+
+-dashboard_data sync_crossings 0

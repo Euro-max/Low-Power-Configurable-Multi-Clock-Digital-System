@@ -1,0 +1,113 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
++incdir         '../rtl'          CmdLine -                              -
+                './rtl'           CmdLine -                              -
+                ../rtl            CmdLine -                              -
+--goal_info     cdc/cdc_abstract@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 39
+-awl            ./lint/cdc/cdc_abstract/lint_waiver_file.awl CmdLine -                              -
+-batch          <ON>              CmdLine -                              -
+-block_abstract <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 59
+-dbdir          ./lint/.SG_SaveRestoreDB CmdLine -                              -
+-decompile_block_constraints <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 62
+-default_waiver_file ./lint/cdc/cdc_abstract/lint_waiver_file.awl CmdLine -                              -
+-enableSV       <ON>              CmdLine -                              -
+-enable_const_prop_thru_seq <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 46
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 29
+-lib            WORK=>./lint/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-policy         clock-reset       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 39
+-projectwdir    ./lint            CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Setup_port01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 68
+                Setup_blackbox01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 70
+                Ac_abstract01     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 72
+                Info_Case_Analysis CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 74
+                FalsePathSetup    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 76
+-sdc_generate_cfp yes               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 60
+-sgdc           SYSTEM.sgdc       CmdLine -                              -
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       cdc/cdc_abstract  CmdLine -                              -
+-templatedir    /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./lint/cdc/cdc_abstract CmdLine -                              -
+<design_files>  ../rtl/ALU_8B.v   APICall -                              -
+                ../rtl/ASYNC_FIFO_TOP.v APICall -                              -
+                ../rtl/B2G.v      APICall -                              -
+                ../rtl/CLKGATE.v  APICall -                              -
+                ../rtl/CLK_DIV.v  APICall -                              -
+                ../rtl/DATA_SAMPLING.v APICall -                              -
+                ../rtl/DATA_SYNC.v APICall -                              -
+                ../rtl/DESERIALIZER.v APICall -                              -
+                ../rtl/DFFS.v     APICall -                              -
+                ../rtl/EDGE_COUNTER.v APICall -                              -
+                ../rtl/FIFO_MEM.v APICall -                              -
+                ../rtl/FIFO_RD.v  APICall -                              -
+                ../rtl/FIFO_WR.v  APICall -                              -
+                ../rtl/FSM.sv     APICall -                              -
+                ../rtl/G2B.v      APICall -                              -
+                ../rtl/MUX.v      APICall -                              -
+                ../rtl/PARITY_CHECKER.v APICall -                              -
+                ../rtl/Parity.v   APICall -                              -
+                ../rtl/PulseGen.v APICall -                              -
+                ../rtl/RESET_SYNC.v APICall -                              -
+                ../rtl/RX_FSM.sv  APICall -                              -
+                ../rtl/RegisterFile.v APICall -                              -
+                ../rtl/START_CHECKER.v APICall -                              -
+                ../rtl/STOP_CHECKER.v APICall -                              -
+                ../rtl/SYSTEM_TOP.v APICall -                              -
+                ../rtl/SYS_CTRL.sv APICall -                              -
+                ../rtl/Serializer.v APICall -                              -
+                ../rtl/UART_TOP_RX.v APICall -                              -
+                ../rtl/UART_TOP_TX.v APICall -                              -
+                ../rtl/uart_tx_defines.v APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+-distributed_fifo CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 54
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_and_sync CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 53
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_debug_data CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 57
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_mux_sync CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 52
+VALUE -- all
+(KNOWN_PARAM)
+-fa_disable_sync_fifo CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 55
+VALUE -- yes
+(KNOWN_PARAM)
+-handle_combo_arc CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 61
+VALUE -- yes
+(KNOWN_PARAM)
+-hier_wild_card CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 58
+VALUE -- no
+(KNOWN_PARAM)
+-strict_sync_check CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_abstract.spq 56
+VALUE -- yes
+(KNOWN_PARAM)
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/spyglass
+clock-reset     SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/clock
+
+

@@ -1,0 +1,35 @@
+0 ../rtl/ALU_8B.v
+1 ../rtl/ASYNC_FIFO_TOP.v
+2 ../rtl/B2G.v
+3 ../rtl/CLK_DIV.v
+4 ../rtl/CLKGATE.v
+5 ../rtl/DATA_SAMPLING.v
+6 ../rtl/DATA_SYNC.v
+7 ../rtl/DESERIALIZER.v
+8 ../rtl/FIFO_MEM.v
+9 ../rtl/FIFO_RD.v
+10 ../rtl/FIFO_WR.v
+11 ../rtl/FSM.sv
+    12 ../rtl/uart_tx_defines.v
+13 ../rtl/G2B.v
+14 ../rtl/MUX.v
+    15 ../rtl/uart_tx_defines.v
+16 ../rtl/Parity.v
+    17 ../rtl/uart_tx_defines.v
+18 ../rtl/PARITY_CHECKER.v
+19 ../rtl/PulseGen.v
+20 ../rtl/RegisterFile.v
+21 ../rtl/RESET_SYNC.v
+22 ../rtl/RX_FSM.sv
+23 ../rtl/Serializer.v
+    24 ../rtl/uart_tx_defines.v
+25 ../rtl/START_CHECKER.v
+26 ../rtl/STOP_CHECKER.v
+27 ../rtl/SYS_CTRL.sv
+28 ../rtl/SYSTEM_TOP.v
+29 ../rtl/UART_TOP_RX.v
+30 ../rtl/UART_TOP_TX.v
+    31 ../rtl/uart_tx_defines.v
+32 ../rtl/uart_tx_defines.v
+33 ../rtl/DFFS.v
+34 ../rtl/EDGE_COUNTER.v

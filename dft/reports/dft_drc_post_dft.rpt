@@ -1,0 +1,110 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Clock violations...
+
+ Warning: Clock scan_clk can capture new data on TE input CKN of DFF u_CLK_DIV_TX/t2_neg_reg. (C6-1)
+         Source of violation: input CK of DFF sync_clk_div_en_ff2_reg.
+Information: There is 1 other cell with the same violation. (TEST-173)
+
+Clock violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U0 has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 3
+
+-----------------------------------------------------------------
+
+2 CLOCK VIOLATIONS
+     2 Trailing edge port captured data affected by new capture violations (C6)
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  3 out of 363 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+      *   2 cells have capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 360 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 19600 faults were added to fault list.
+ 0            9416   6037         0/0/0    68.24%      0.16
+ 0            1885   4152         0/0/0    77.89%      0.27
+ 0            1088   3064         0/0/0    83.45%      0.34
+ 0             617   2446         1/0/1    86.62%      0.43
+ 0             450   1996         1/0/1    88.92%      0.48
+ 0             372   1623         2/0/1    90.83%      0.55
+ 0             236   1382         6/0/1    92.06%      0.62
+ 0             190   1189         9/0/2    93.04%      0.73
+ 0             145   1040        13/0/3    93.81%      0.85
+ 0             238    797        17/0/5    95.05%      0.95
+ 0             131    663        20/0/7    95.73%      1.07
+ 0             126    534        23/0/8    96.39%      1.14
+ 0              95    436        25/0/9    96.90%      1.21
+ 0              95    338       28/0/10    97.40%      1.28
+ 0              70    266       30/0/11    97.77%      1.35
+ 0              79    178       39/0/12    98.22%      1.48
+ 0              47    124       44/0/13    98.49%      1.56
+ 0              50     60       51/0/13    98.82%      1.63
+ 0               7     48       54/0/13    98.88%      1.64
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      19259
+ Possibly detected                PT          2
+ Undetectable                     UD        122
+ ATPG untestable                  AU        171
+ Not detected                     ND         46
+ -----------------------------------------------
+ total faults                             19600
+ test coverage                            98.88%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

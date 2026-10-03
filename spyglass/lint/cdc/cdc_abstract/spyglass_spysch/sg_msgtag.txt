@@ -1,0 +1,91 @@
+11 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+1
+12 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+2
+13 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+3
+14 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+4
+15 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+5
+16 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+6
+17 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+7
+18 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+8
+20 "Setup_port01" 1
+"Open_Sp_Sheet"
+["./lint/cdc/cdc_abstract/spyglass_reports/clock-reset/Setup_port01/SYS_TOP.csv"]
+-1 "Ac_abstract01" 3
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[3]
+"RULEGROUP"
+["clock-reset/BLOCK_ABSTRACT"]
+-1 "CMD_sglib03" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_Case_Analysis" 5
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[4]
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Propagate_Clocks" 3
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Propagate_Resets" 3
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "SGDC_cdc_false_path07" 2
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[-1]
+-1 "Setup_port01" 3
+"TEMPLATE"
+["cdc/cdc_abstract"]
+"RULE_ORDER"
+[1]
+"RULEGROUP"
+["clock-reset/SETUP"]
+-1 "checkCMD_dirfile03" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"

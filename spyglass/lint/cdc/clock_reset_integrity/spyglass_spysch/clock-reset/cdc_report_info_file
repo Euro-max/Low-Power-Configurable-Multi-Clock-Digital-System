@@ -1,0 +1,11 @@
+
+clock@@name@@SYS_TOP.REF_CLK@@domain@@CLKREF_DOMAIN@@period@@20@@
+clock@@name@@SYS_TOP.UART_CLK@@domain@@CLKUART_DOMAIN@@period@@271.30@@
+clock@@name@@SYS_TOP.tx_clk@@domain@@CLKUART_DOMAIN@@
+clock@@name@@SYS_TOP.rx_clk@@domain@@CLKUART_DOMAIN@@
+clock@@name@@SYS_TOP.alu_clk@@domain@@CLKREF_DOMAIN@@
+reset@@name@@RST@@value@@0@@async@@
+quasi_static@@SYS_TOP.div_ratio[7:0]@@
+quasi_static@@SYS_TOP.uart_config[7:0]@@
+quasi_static@@SYS_TOP.clk_div_en@@
+quasi_static@@SYS_TOP.u_RegFile.mem[103:96]@@
