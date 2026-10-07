@@ -1,0 +1,481 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Sun Oct  4 21:10:06 2026                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+setUIVar rda_Input ui_topcell SYS_TOP
+setUIVar rda_Input ui_netlist /home/ahesham/Labs/deliver/dft/netlists/SYS_TOP_dft.v
+setUIVar rda_Input ui_timelib,min /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+setUIVar rda_Input ui_timelib,max /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+setUIVar rda_Input ui_timelib /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+setUIVar rda_Input ui_leffile {/home/ahesham/Labs/deliver/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Labs/deliver/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Labs/deliver/pnr/import/SYS_TOP_4.lef}
+setUIVar rda_Input ui_captbl_file /home/ahesham/Labs/deliver/std_cells/captables/tsmc13fsg.capTbl
+setUIVar rda_Input ui_timingcon_file /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc
+setUIVar rda_Input ui_pwrnet VDD
+setUIVar rda_Input ui_gndnet VSS
+commitConfig
+create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+windowSelect -19.772 218.858 24.744 183.315
+zoomBox -13.905 219.203 18.877 160.195
+zoomBox -3.136 211.794 8.021 186.605
+zoomBox -3.492 205.506 11.242 195.758
+floorPlan -d 240.47 160.47 6.0 6.0 6.0 6.0
+zoomBox -10.784 122.865 37.452 95.749
+zoomBox -1.306 113.212 3.060 107.765
+zoomBox -1.099 110.533 3.424 108.231
+zoomBox -0.189 110.305 1.786 108.894
+addRing -spacing_bottom 0.5 -width_left 2 -width_bottom 2 -width_top 2 -spacing_top 0.5 -layer_bottom METAL5 -center 1 -stacked_via_top_layer METAL7 -width_right 2 -around core -jog_distance 0.205 -offset_bottom 0.205 -layer_top METAL5 -threshold 0.205 -offset_left 0.205 -spacing_right 0.5 -spacing_left 0.5 -offset_right 0.205 -offset_top 0.205 -layer_right METAL6 -nets {VSS VDD } -stacked_via_bottom_layer METAL1 -layer_left METAL6
+zoomBox -3.744 114.522 59.614 35.258
+zoomBox -2.565 97.194 29.984 61.016
+zoomBox -3.365 86.559 23.142 77.582
+uiSetTool ruler
+zoomBox 0.825 82.591 2.558 82.455
+zoomBox -10.784 109.829 53.878 83.234
+zoomBox -2.829 104.565 12.924 96.944
+zoomBox 0.775 100.940 2.622 100.850
+zoomBox -18.607 120.779 41.623 71.501
+zoomBox -18.881 112.845 28.868 86.496
+uiSetTool ruler
+zoomBox -3.822 106.267 17.311 95.292
+addStripe -block_ring_top_layer_limit METAL7 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL5 -set_to_set_distance 60 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL7 -spacing 0.5 -merge_stripes_value 0.205 -layer METAL6 -block_ring_bottom_layer_limit METAL5 -width 1 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+addStripe -block_ring_top_layer_limit METAL7 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL5 -set_to_set_distance 60 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL7 -spacing 0.5 -merge_stripes_value 0.205 -layer METAL6 -block_ring_bottom_layer_limit METAL5 -width 1 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+zoomBox -10.263 130.687 49.706 85.058
+zoomBox -5.183 120.577 49.343 101.773
+uiSetTool select
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+deselectAll
+selectWire 6.1500 3.3250 7.1500 156.2450 6 VSS
+deselectAll
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+deselectAll
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+deselectAll
+selectWire 6.1500 3.3250 7.1500 156.2450 6 VSS
+panCenter 6.752 114.073
+panCenter 6.457 115.918
+deselectAll
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+panCenter 8.023 118.817
+deselectAll
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+deselectAll
+selectWire 6.1500 3.3250 7.1500 156.2450 6 VSS
+deleteSelectedFromFPlan
+selectWire 7.6500 0.8250 8.6500 158.7450 6 VDD
+deleteSelectedFromFPlan
+zoomBox 221.008 121.300 292.189 67.329
+sroute -connect { blockPin padPin padRing corePin } -layerChangeRange { 1 6 } -blockPinTarget { nearestRingStripe nearestTarget } -padPinPortConnect { allPort oneGeom } -checkAlignedSecondaryPin 1 -blockPin useLef -allowJogging 1 -crossoverViaBottomLayer 1 -allowLayerChange 1 -targetViaTopLayer 7 -crossoverViaTopLayer 7 -targetViaBottomLayer 1 -nets { VSS VDD }
+sroute -connect { blockPin padPin padRing corePin } -layerChangeRange { 1 6 } -blockPinTarget { nearestRingStripe nearestTarget } -padPinPortConnect { allPort oneGeom } -checkAlignedSecondaryPin 1 -blockPin useLef -allowJogging 1 -crossoverViaBottomLayer 1 -allowLayerChange 1 -targetViaTopLayer 7 -crossoverViaTopLayer 7 -targetViaBottomLayer 1 -nets { VSS VDD }
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+saveFPlan /home/ahesham/Labs/deliver/pnr/SYS_TOP.fp
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+getIoFlowFlag
+clearClockDomains
+setClockDomains -all
+timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_preCTS -outDir timingReports
+optDesign -preCTS
+optDesign -preCTS
+clockDesign -genSpecOnly Clock.ctstch
+clockDesign -specFile Clock.ctstch -outDir clock_report -fixedInstBeforeCTS
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postCTS -outDir timingReports
+optDesign -postCTS -hold
+refinePlace -preserveRouting
+setNanoRouteMode -routeWithEco true
+routeDesign -globalDetail -viaOpt -wireOpt
+zoomBox 19.721 165.626 258.033 30.565
+zoomBox 54.190 141.088 207.206 67.871
+zoomBox 77.651 129.516 168.712 94.260
+zoomBox 90.712 127.797 165.546 103.374
+zoomBox 95.349 126.626 164.057 107.183
+getIoFlowFlag
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+verifyProcessAntenna -reportfile SYS_TOP.antenna.rpt -leffile SYS_TOP.antenna.lef -error 1000
+addFiller -cell {FILL1M FILL2M FILL4M FILL8M FILL16M FILL32M FILL64M} -prefix FILLER -markFixed
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setLayerPreference hinst -isVisible 0
+setLayerPreference fence -isVisible 0
+setLayerPreference guide -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference region -isVisible 0
+setLayerPreference screen -isVisible 0
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference io -isVisible 0
+setLayerPreference areaIo -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference term -isVisible 0
+setLayerPreference ruler -isVisible 0
+setLayerPreference text -isVisible 0
+setLayerPreference relFPlan -isVisible 0
+setLayerPreference yieldCell -isVisible 0
+setLayerPreference yieldMap -isVisible 0
+setLayerPreference sdpConnect -isVisible 0
+setLayerPreference densityMap -isVisible 0
+setLayerPreference hinst -isVisible 1
+setLayerPreference fence -isVisible 1
+setLayerPreference guide -isVisible 1
+setLayerPreference obstruct -isVisible 1
+setLayerPreference region -isVisible 1
+setLayerPreference screen -isVisible 1
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference coverCell -isVisible 1
+setLayerPreference block -isVisible 1
+setLayerPreference io -isVisible 1
+setLayerPreference areaIo -isVisible 1
+setLayerPreference net -isVisible 1
+setLayerPreference power -isVisible 1
+setLayerPreference term -isVisible 1
+setLayerPreference ruler -isVisible 1
+setLayerPreference text -isVisible 1
+setLayerPreference relFPlan -isVisible 1
+setLayerPreference yieldCell -isVisible 1
+setLayerPreference yieldMap -isVisible 1
+setLayerPreference sdpConnect -isVisible 1
+setLayerPreference densityMap -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference phyCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference pg -isVisible 0
+setLayerPreference layerBlk -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference cellBlkgObj -isVisible 0
+setLayerPreference pinObj -isVisible 0
+setLayerPreference layoutObj -isVisible 0
+setLayerPreference stdRow -isVisible 0
+setLayerPreference metalFill -isVisible 0
+setLayerPreference violation -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference implant0 -isVisible 0
+setLayerPreference implant1 -isVisible 0
+setLayerPreference busguide -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference phyCell -isVisible 1
+setLayerPreference coverCell -isVisible 1
+setLayerPreference block -isVisible 1
+setLayerPreference pg -isVisible 1
+setLayerPreference layerBlk -isVisible 1
+setLayerPreference obstruct -isVisible 1
+setLayerPreference cellBlkgObj -isVisible 1
+setLayerPreference pinObj -isVisible 1
+setLayerPreference layoutObj -isVisible 1
+setLayerPreference stdRow -isVisible 1
+setLayerPreference metalFill -isVisible 1
+setLayerPreference violation -isVisible 1
+setLayerPreference net -isVisible 1
+setLayerPreference power -isVisible 1
+setLayerPreference implant0 -isVisible 1
+setLayerPreference implant1 -isVisible 1
+setLayerPreference busguide -isVisible 1
+setLayerPreference stdCell -isVisible 0
+setLayerPreference stdCell -isVisible 1
+setLayerPreference phyCell -isVisible 0
+setLayerPreference phyCell -isVisible 1
+setLayerPreference coverCell -isVisible 0
+setLayerPreference coverCell -isVisible 1
+setDrawView ameba
+setDrawView place
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference phyCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference pg -isVisible 0
+setLayerPreference layerBlk -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference cellBlkgObj -isVisible 0
+setLayerPreference pinObj -isVisible 0
+setLayerPreference layoutObj -isVisible 0
+setLayerPreference stdRow -isVisible 0
+setLayerPreference metalFill -isVisible 0
+setLayerPreference violation -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference implant0 -isVisible 0
+setLayerPreference implant1 -isVisible 0
+setLayerPreference busguide -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference phyCell -isVisible 1
+setLayerPreference coverCell -isVisible 1
+setLayerPreference block -isVisible 1
+setLayerPreference pg -isVisible 1
+setLayerPreference layerBlk -isVisible 1
+setLayerPreference obstruct -isVisible 1
+setLayerPreference cellBlkgObj -isVisible 1
+setLayerPreference pinObj -isVisible 1
+setLayerPreference layoutObj -isVisible 1
+setLayerPreference stdRow -isVisible 1
+setLayerPreference metalFill -isVisible 1
+setLayerPreference violation -isVisible 1
+setLayerPreference net -isVisible 1
+setLayerPreference power -isVisible 1
+setLayerPreference implant0 -isVisible 1
+setLayerPreference implant1 -isVisible 1
+setLayerPreference busguide -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference inst -isSelectable 0
+setLayerPreference stdCell -isSelectable 0
+setLayerPreference phyCell -isSelectable 0
+setLayerPreference coverCell -isSelectable 0
+setLayerPreference block -isSelectable 0
+setLayerPreference pg -isSelectable 0
+setLayerPreference layerBlk -isSelectable 0
+setLayerPreference obstruct -isSelectable 0
+setLayerPreference cellBlkgObj -isSelectable 0
+setLayerPreference pinObj -isSelectable 0
+setLayerPreference layoutObj -isSelectable 0
+setLayerPreference stdRow -isSelectable 0
+setLayerPreference metalFill -isSelectable 0
+setLayerPreference violation -isSelectable 0
+setLayerPreference net -isSelectable 0
+setLayerPreference power -isSelectable 0
+setLayerPreference implant0 -isSelectable 0
+setLayerPreference implant1 -isSelectable 0
+setLayerPreference busguide -isSelectable 0
+setLayerPreference inst -isSelectable 1
+setLayerPreference stdCell -isSelectable 1
+setLayerPreference phyCell -isSelectable 1
+setLayerPreference coverCell -isSelectable 1
+setLayerPreference block -isSelectable 1
+setLayerPreference pg -isSelectable 1
+setLayerPreference layerBlk -isSelectable 1
+setLayerPreference obstruct -isSelectable 1
+setLayerPreference cellBlkgObj -isSelectable 1
+setLayerPreference pinObj -isSelectable 1
+setLayerPreference layoutObj -isSelectable 1
+setLayerPreference stdRow -isSelectable 1
+setLayerPreference metalFill -isSelectable 1
+setLayerPreference violation -isSelectable 1
+setLayerPreference net -isSelectable 1
+setLayerPreference power -isSelectable 1
+setLayerPreference implant0 -isSelectable 1
+setLayerPreference implant1 -isSelectable 1
+setLayerPreference busguide -isSelectable 1
+setLayerPreference hinst -isVisible 0
+setLayerPreference hinst -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference phyCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference pg -isVisible 0
+setLayerPreference layerBlk -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference cellBlkgObj -isVisible 0
+setLayerPreference pinObj -isVisible 0
+setLayerPreference layoutObj -isVisible 0
+setLayerPreference stdRow -isVisible 0
+setLayerPreference metalFill -isVisible 0
+setLayerPreference violation -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference implant0 -isVisible 0
+setLayerPreference implant1 -isVisible 0
+setLayerPreference busguide -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference phyCell -isVisible 1
+setLayerPreference phyCell -isVisible 0
+setLayerPreference phyCell -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference phyCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference pg -isVisible 0
+setLayerPreference layerBlk -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference cellBlkgObj -isVisible 0
+setLayerPreference pinObj -isVisible 0
+setLayerPreference layoutObj -isVisible 0
+setLayerPreference stdRow -isVisible 0
+setLayerPreference metalFill -isVisible 0
+setLayerPreference violation -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference implant0 -isVisible 0
+setLayerPreference implant1 -isVisible 0
+setLayerPreference busguide -isVisible 0
+setLayerPreference hinst -isVisible 0
+setLayerPreference fence -isVisible 0
+setLayerPreference guide -isVisible 0
+setLayerPreference obstruct -isVisible 0
+setLayerPreference region -isVisible 0
+setLayerPreference screen -isVisible 0
+setLayerPreference inst -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference io -isVisible 0
+setLayerPreference areaIo -isVisible 0
+setLayerPreference net -isVisible 0
+setLayerPreference power -isVisible 0
+setLayerPreference term -isVisible 0
+setLayerPreference ruler -isVisible 0
+setLayerPreference text -isVisible 0
+setLayerPreference relFPlan -isVisible 0
+setLayerPreference yieldCell -isVisible 0
+setLayerPreference yieldMap -isVisible 0
+setLayerPreference sdpConnect -isVisible 0
+setLayerPreference densityMap -isVisible 0
+setLayerPreference hinst -isVisible 1
+setLayerPreference fence -isVisible 1
+setLayerPreference guide -isVisible 1
+setLayerPreference obstruct -isVisible 1
+setLayerPreference region -isVisible 1
+setLayerPreference screen -isVisible 1
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference coverCell -isVisible 1
+setLayerPreference block -isVisible 1
+setLayerPreference io -isVisible 1
+setLayerPreference areaIo -isVisible 1
+setLayerPreference net -isVisible 1
+setLayerPreference power -isVisible 1
+setLayerPreference term -isVisible 1
+setLayerPreference ruler -isVisible 1
+setLayerPreference text -isVisible 1
+setLayerPreference relFPlan -isVisible 1
+setLayerPreference yieldCell -isVisible 1
+setLayerPreference yieldMap -isVisible 1
+setLayerPreference sdpConnect -isVisible 1
+setLayerPreference densityMap -isVisible 1
+setLayerPreference phyCell -isVisible 1
+checkFiller -highlight true
+setLayerPreference obstruct -isVisible 0
+setLayerPreference obstruct -isVisible 1
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+selectInst {u_SYS_CTRL/addr_reg_reg[1]}
+zoomBox 121.934 162.684 287.355 67.561
+zoomBox 131.090 155.799 242.651 80.909
+zoomBox 122.544 154.029 216.793 97.392
+zoomBox 134.406 151.018 228.439 107.180
+saveDesign /home/ahesham/Labs/deliver/pnr/SYS_TOP.enc
+saveNetlist export/SYS_TOP.v
+saveNetlist export/SYS_TOP_pg.v -includePowerGround
+rcOut -spf export/SYS_TOP.spf
+saveNetlist export/SYS_TOP.v
+saveNetlist export/SYS_TOP_pg.v -includePowerGround
+extractRC
+rcOut -spf export/SYS_TOP.spf
+delayCal -sdf export/SYS_TOP.sdf -version 3.0
+report_power -outfile report/power.rpt
+streamOut export/SYS_TOP.gds -mapFile ./import/gds2InLayer.map -libName DesignLib -stripes 1 -units 2000 -mode ALL
+selectVia 137.0000 58.2800 137.2900 59.0050 3 u_SYS_CTRL/n67
+deselectAll
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -signoff -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_signOff -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+setLayerPreference hinst -isSelectable 0
+setLayerPreference fence -isSelectable 0
+setLayerPreference guide -isSelectable 0
+setLayerPreference obstruct -isSelectable 0
+setLayerPreference region -isSelectable 0
+setLayerPreference screen -isSelectable 0
+setLayerPreference inst -isSelectable 0
+setLayerPreference stdCell -isSelectable 0
+setLayerPreference coverCell -isSelectable 0
+setLayerPreference block -isSelectable 0
+setLayerPreference io -isSelectable 0
+setLayerPreference areaIo -isSelectable 0
+setLayerPreference net -isSelectable 0
+setLayerPreference power -isSelectable 0
+setLayerPreference term -isSelectable 0
+setLayerPreference ruler -isSelectable 0
+setLayerPreference text -isSelectable 0
+setLayerPreference relFPlan -isSelectable 0
+setLayerPreference yieldCell -isSelectable 0
+setLayerPreference yieldMap -isSelectable 0
+setLayerPreference sdpConnect -isSelectable 0
+setLayerPreference densityMap -isSelectable 0
+setLayerPreference hinst -isSelectable 1
+setLayerPreference fence -isSelectable 1
+setLayerPreference guide -isSelectable 1
+setLayerPreference obstruct -isSelectable 1
+setLayerPreference region -isSelectable 1
+setLayerPreference screen -isSelectable 1
+setLayerPreference inst -isSelectable 1
+setLayerPreference stdCell -isSelectable 1
+setLayerPreference coverCell -isSelectable 1
+setLayerPreference block -isSelectable 1
+setLayerPreference io -isSelectable 1
+setLayerPreference areaIo -isSelectable 1
+setLayerPreference net -isSelectable 1
+setLayerPreference power -isSelectable 1
+setLayerPreference term -isSelectable 1
+setLayerPreference ruler -isSelectable 1
+setLayerPreference text -isSelectable 1
+setLayerPreference relFPlan -isSelectable 1
+setLayerPreference yieldCell -isSelectable 1
+setLayerPreference yieldMap -isSelectable 1
+setLayerPreference sdpConnect -isSelectable 1
+setLayerPreference densityMap -isSelectable 1
+setLayerPreference relFPlan -isVisible 0
+setLayerPreference relFPlan -isVisible 1
+setLayerPreference obstruct -isVisible 0
+setLayerPreference obstruct -isVisible 1
+setLayerPreference screen -isVisible 0
+setLayerPreference screen -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference stdCell -isVisible 0
+setLayerPreference stdCell -isVisible 1
+setLayerPreference coverCell -isVisible 0
+setLayerPreference coverCell -isVisible 1
+setLayerPreference block -isVisible 0
+setLayerPreference block -isVisible 1
+setLayerPreference densityMap -isVisible 0
+editSplit
+zoomBox 73.172 92.099 223.095 7.099
+zoomBox 50.641 81.678 251.527 9.861
+zoomBox 72.160 68.148 235.731 16.295
+zoomBox 101.053 58.951 244.399 13.282
+zoomBox 139.606 39.261 217.445 21.291
+zoomBox 153.932 39.923 201.345 25.553
+zoomBox 170.439 35.480 190.107 29.239
+zoomBox 190.242 161.975 287.495 118.172

@@ -7,6 +7,10 @@ current_design SYS_TOP
 clock -name "REF_CLK"  -domain CLKREF_DOMAIN  -period 20     -waveform {0 10}
 clock -name "UART_CLK" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
 
+# Declare generated clocks (Overriding the combinational XOR outputs)
+clock -name "SYS_TOP.tx_clk"  -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
+clock -name "SYS_TOP.rx_clk"  -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
+clock -name "SYS_TOP.alu_clk" -domain CLKREF_DOMAIN  -period 20     -waveform {0 10}
 
 #######################################################################
              #### Section 2 : Reset Definition ####
@@ -16,21 +20,41 @@ reset -name "RST" -value 0 -async
 #######################################################################
          #### Section 3 : set input/output clock domains ####
 #######################################################################
-# Constrain top-level ports to their respective clock domains to avoid 
-# unconstrained I/O violations. 
 abstract_port -ports "RX_IN"  -clock "UART_CLK"
 abstract_port -ports "TX_OUT" -clock "UART_CLK"
-clock -name "SYS_TOP.tx_clk" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
-clock -name "SYS_TOP.rx_clk" -domain CLKUART_DOMAIN -period 271.30 -waveform {0 135.65}
-clock -name "SYS_TOP.alu_clk" -domain CLKREF_DOMAIN -period 20 -waveform {0 10}
+
 #######################################################################
             #### Section 4 : DATA/RESET Synchronizers ####
 #######################################################################
-# Define configuration signals as stable to ignore CDC checks on them
-quasi_static -name "SYS_TOP.div_ratio"
-quasi_static -name "SYS_TOP.uart_config"
-quasi_static -name "SYS_TOP.clk_div_en"
-quasi_static -name "SYS_TOP.u_RegFile.mem[3]"
-# Inform SpyGlass that memory read data is safely synchronized by the pointer logic
-cdc_false_path -from "SYS_TOP.u_ASYNC_FIFO.memory_core.mem" -to "*"
-fifo -memory "SYS_TOP.u_ASYNC_FIFO.memory_core.mem"
+# 1. Enable Gray-code checking in SpyGlass CDC
+set_parameter cdc_enable_gray_check yes
+
+# 2. Define FIFO structure (This automatically handles memory paths safely)
+fifo -memory "SYS_TOP.u_ASYNC_FIFO.memory_core" \
+     -wclock "SYS_TOP.u_ASYNC_FIFO.wclk" \
+     -rclock "SYS_TOP.u_ASYNC_FIFO.rclk" \
+     -wptr "SYS_TOP.u_ASYNC_FIFO.wptr_gray" \
+     -rptr "SYS_TOP.u_ASYNC_FIFO.rptr_gray"
+
+# 3. Define configuration signals as stable to ignore CDC checks on them
+# Note: Using '*' ensures multidimensional arrays and multibit wires are fully covered.
+quasi_static -name "SYS_TOP.div_ratio*"
+quasi_static -name "SYS_TOP.uart_config*"
+quasi_static -name "SYS_TOP.clk_div_en*"
+quasi_static -name "SYS_TOP.sync_clk_div_en_ff2*"
+quasi_static -name "SYS_TOP.u_RegFile.mem*"
+
+#######################################################################
+            #### Section 5 : Clock Divider Waivers ####
+#######################################################################
+# Waive unexpected XOR gates in the clock tree for all CLK_DIV instances
+waive -rule "Clock_check01" -module "CLK_DIV" \
+      -comment "Intentional combinational logic (XOR) used to achieve 50% duty cycle on odd divide ratios"
+
+# Waive dual-edge clocking warning for all CLK_DIV instances
+waive -rule "Clock_check04" -module "CLK_DIV" \
+      -comment "Intentional dual-edge sampling used to achieve 50% duty cycle on odd divide ratios"
+
+# Waive combinational logic clock convergence for the clock divider bypass mux
+waive -rule "Clock_glitch04" -module "CLK_DIV" \
+      -comment "Mux selection signals are quasi-static configuration bits"

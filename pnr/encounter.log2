@@ -1,0 +1,110 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Sun Oct  4 23:56:04 2026 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Reading config file - /home/ahesham/Labs/deliver/pnr/SYS_TOP.enc.dat/SYS_TOP.conf
+**WARN: (SOCLF-246):	The 'UNITS' attribute should be set
+in the first lef file (technology lef). There is an attempt to set it
+in subsequent lef files which will be ignored.
+**WARN: (SOCLF-46):	Class CORE macro 'SYS_TOP' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE FE_CORE_0 was
+created and will be used for this macro, using height 180.6000 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (SOCDB-2079):	fterm SI[4] of cell SYS_TOP is not defined in LEF.
+**WARN: (SOCDB-2079):	fterm SO[4] of cell SYS_TOP is not defined in LEF.
+**WARN: (SOCSYC-2):	Timing is not defined for cell SYS_TOP.
+*** End library_loading (cpu=0.48min, mem=90.8M, fe_cpu=0.86min, fe_mem=280.5M) ***
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-287):	Library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c is not in the max library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+Loading preference file /home/ahesham/Labs/deliver/pnr/SYS_TOP.enc.dat/enc.pref.tcl ...
+#WARNING (NRIF-64) When droutePostRouteSwapVia is NOT set to 'false' or 'none', the tool just does post route via optimization and it will NOT do normal routing.
+loading place ...
+loading route ...
+<CMD> setDrawView place
+<CMD> zoomBox 73.433 128.601 275.241 22.221
+<CMD> zoomBox 161.216 104.716 263.982 64.490
+<CMD> zoomBox 197.358 95.091 232.593 68.293
+<CMD> zoomBox 202.328 85.670 220.260 76.368
+<CMD> zoomBox 205.832 82.029 211.383 80.064
+<CMD> zoomBox 206.173 81.433 207.861 80.079
+<CMD> setDrawView ameba
+
+*** Memory Usage v0.144 (Current mem = 302.086M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:02:44, real=0:06:57, mem=302.1M) ---

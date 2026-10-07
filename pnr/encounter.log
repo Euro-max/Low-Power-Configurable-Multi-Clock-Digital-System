@@ -1,0 +1,341 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Sun Oct  4 21:01:36 2026 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell SYS_TOP
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Labs/deliver/dft/netlists/SYS_TOP.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Labs/deliver/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Labs/deliver/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Labs/deliver/pnr/import/SYS_TOP_4.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Labs/deliver/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+**ERROR: (SOCSYT-16038):	'/home/ahesham/Labs/deliver/dft/netlists/SYS_TOP.v' not found.
+
+Loading Lef file /home/ahesham/Labs/deliver/std_cells/lef/tsmc13fsg_7lm_tech.lef...
+
+Loading Lef file /home/ahesham/Labs/deliver/std_cells/lef/tsmc13_m_macros.lef...
+Set DBUPerIGU to M2 pitch 820.
+Initializing default via types and wire widths ...
+
+Loading Lef file /home/ahesham/Labs/deliver/pnr/import/SYS_TOP_4.lef...
+**WARN: (SOCLF-246):	The 'UNITS' attribute should be set
+in the first lef file (technology lef). There is an attempt to set it
+in subsequent lef files which will be ignored.
+**WARN: (SOCLF-46):	Class CORE macro 'SYS_TOP' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE FE_CORE_0 was
+created and will be used for this macro, using height 180.6000 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+
+Power Planner/ViaGen version 8.1.45 promoted on 09/01/2008.
+viaInitial starts at Sun Oct  4 21:02:19 2026
+viaInitial ends at Sun Oct  4 21:02:19 2026
+**ERROR: (SOCSYT-16038):	'/home/ahesham/Labs/deliver/dft/netlists/SYS_TOP.v' not found.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+
+*** Memory Usage v0.144 (Current mem = 189.285M, initial mem = 62.238M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=189.3M) ***
+Set top cell to SYS_TOP.
+Reading max timing library '/home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' 
+Reading min timing library '/home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' 
+Reading max timing library '/home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+Reading min timing library '/home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+*** End library_loading (cpu=0.36min, mem=91.2M, fe_cpu=0.74min, fe_mem=280.5M) ***
+Starting recursive module instantiation check.
+No recursion found.
+*****NEW dbFlattenCell is used.
+Flattening Cell SYS_TOP ...
+*** Netlist is unique.
+** info: there are 2487 modules.
+** info: there are 0 stdCell insts.
+
+*** Memory Usage v0.144 (Current mem = 280.777M, initial mem = 62.238M) ***
+CTE reading timing constraint file '/home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc' ...
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'SI[4]' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 12).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**ERROR: (TCLNL-312):	set_driving_cell: Invalid list of pins: '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 12).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'SO[4]' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or nets' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 21).
+
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'u_CLK_DIV_TX/o_div_clk' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 51).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 51).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 52).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 52).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 53).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 53).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 54).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 54).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 55).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 55).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 56).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 56).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 57).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 57).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 58).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 58).
+
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'u_CLK_DIV_RX/o_div_clk' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 59).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 59).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 60).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 60).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 61).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 61).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 62).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 62).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 63).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 63).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 64).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 64).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 65).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 65).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 66).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 66).
+
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'U0/ECK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 67).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 67).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 68).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 68).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 69).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 69).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 70).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 70).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 71).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 71).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 72).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 72).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 73).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 73).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 74).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 74).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'SI[4]' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 78).
+
+**ERROR: (TCLNL-312):	set_input_delay: Invalid list of pins: '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 78).
+
+**ERROR: (TCLCMD-265):	Can't get clock definition for clock 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 84).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'SO[4]' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 85).
+
+**ERROR: (TCLNL-312):	set_output_delay: Invalid list of pins: '' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 85).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 90).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 90).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 90).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'ALU_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 91).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'TX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 91).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'RX_CLK' (File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc, Line 91).
+
+INFO (CTE): read_dc_script finished with  1 WARNING and 63 ERROR
+WARNING (CTE-25): Line: 8 of File /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc : Skipped unsupported command: set_units
+
+
+*** Read timing constraints (cpu=0:00:00.0 mem=282.1M) ***
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2M BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX32M BUFX3M CLKBUFX1M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX3M CLKBUFX32M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1M CLKINVX12M CLKINVX16M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX3M CLKINVX32M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX2M INVX1M INVX20M INVX24M INVX32M INVX4M INVX3M INVX6M INVX5M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Empty design data detected, resetting design die size to 10x10 microns.
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF.
+**WARN: (SOCDC-1159):	Invalid input transition time. The default 0.1ps input transition time will be used.
+Set Input Pin Transition Delay as 0.1 ps.
+Reading Capacitance Table File /home/ahesham/Labs/deliver/std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+**ERROR: (TCLCMD-995):	Can not open file '../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' for library set
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell SYS_TOP
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Labs/deliver/dft/netlists/SYS_TOP_dft.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Labs/deliver/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Labs/deliver/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Labs/deliver/pnr/import/SYS_TOP_4.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Labs/deliver/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+**WARN: (SOCSYT-3034):	commitConfig can only be run once per session.
+ This command is skipped since it's already run by user or by loadConfig command implicitly.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+**ERROR: (TCLCMD-995):	Can not open file '../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' for library set
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell SYS_TOP
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Labs/deliver/dft/netlists/SYS_TOP_dft.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Labs/deliver/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Labs/deliver/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Labs/deliver/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Labs/deliver/pnr/import/SYS_TOP_4.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Labs/deliver/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Labs/deliver/dft/sdc/SYS_TOP.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+**WARN: (SOCSYT-3034):	commitConfig can only be run once per session.
+ This command is skipped since it's already run by user or by loadConfig command implicitly.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+**ERROR: (TCLCMD-995):	Can not open file '../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' for library set
+**INFO (INTERRUPT): One more Ctrl-C to exit First Encounter ...
+
+*** Memory Usage v0.144 (Current mem = 282.473M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:02:35, real=0:07:39, mem=282.5M) ---
